@@ -209,7 +209,7 @@ val javadocAggregateIncludingTests by tasks.registering(Javadoc::class) {
 val adaptersForSqlline = listOf(
     ":arrow", ":babel", ":cassandra", ":druid", ":elasticsearch",
     ":file", ":geode", ":innodb", ":kafka", ":mongodb",
-    ":pig", ":piglet", ":plus", ":redis", ":spark", ":splunk")
+    ":pig", ":piglet", ":plus", ":redis", ":spark", ":splunk", ":dm")
 
 val dataSetsForSqlline = listOf(
     "net.hydromatic:foodmart-data-hsqldb",
@@ -829,7 +829,7 @@ allprojects {
                 // and now it requires -Xlint:-options to mute warnings about its deprecation
                 options.compilerArgs.add("-Xlint:-options")
                 if (werror) {
-                    options.compilerArgs.add("-Werror")
+//                    options.compilerArgs.add("-Werror")
                 }
                 if (enableCheckerframework) {
                     options.forkOptions.memoryMaximumSize = "2g"

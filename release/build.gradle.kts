@@ -212,7 +212,7 @@ for (archive in listOf(Tar::class)) {
             logger.lifecycle("Source distribution is created: ${archiveFile.get().asFile}")
         }
     }
-    releaseArtifacts {
-        artifact(archiveTask)
-    }
+//    releaseArtifacts {
+//        artifact(archiveTask)
+//    }
 }

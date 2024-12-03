@@ -1,0 +1,17 @@
+{
+  "version": "1.0",
+  "defaultSchema": "calcite",
+  "schemas": [
+    {
+      "name": "calcite",
+      "type": "custom",
+      "factory": "org.apache.calcite.adapter.dm.DmSchemaFactory",
+      "operand": {
+        "jdbcDriver": "dm.jdbc.driver.DmDriver",
+        "jdbcUrl": "jdbc:dm://172.27.22.237:9006/calcite",
+        "jdbcUser": "SYSDBA",
+        "jdbcPassword": "SYSDBA"
+      }
+    }
+  ]
+}
